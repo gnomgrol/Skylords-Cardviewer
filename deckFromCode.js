@@ -134,7 +134,7 @@ $(document).ready(function(){
         }
     };
     
-    xmlhttpSB.open("GET", "proxy.php?url=https://cardbase.skylords.eu/Cards/GetCards", true);
+    xmlhttpSB.open("GET", proxy + "https://cardbase.skylords.eu/Cards/GetCards", true);
     xmlhttpSB.send();
 
 });
