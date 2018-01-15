@@ -1,0 +1,193 @@
+﻿<html>
+	<head>
+		<title>Skylords Cardlist</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script type="text/javascript" src="scripts.js"></script>
+	</head>
+	
+	<body>
+		<div class="topBar">
+			<a class="textLink" href="https://forum.skylords.eu">Skylords Forum</a>
+			<a class="textLink" href="https://forum.skylords.eu/index.php?/topic/572-skylords-reborn-faq/">FAQ</a>
+			<a class="textLink" href="https://dev.skylords.eu/">Dev Platform</a>
+			<a class="textLink" href="http://skylords-reborn.wikia.com/wiki/Skylords_Reborn">Wiki</a>
+			<a class="textLink" href="https://discord.gg/0y3WGMGXhd5q2lXA">Discord</a>
+			<a class="textLink" href="https://forum.skylords.eu/index.php?/topic/3278-official-my-improved-cardbase/">Report a Bug</a>
+			
+			<div style="height: 100%; width: 10px; display: inline-block;"></div>
+			<a href="https://www.facebook.com/Skylords-Reborn-1631379693773798/"><img class="miniIcon" src="imgs/fb.png"></a>
+			<a href="https://twitter.com/SkylordsReborn"><img class="miniIcon" src="imgs/tw.png"></a>
+			<a href="https://www.twitch.tv/skylordsreborn"><img class="miniIcon" src="imgs/twit.png"></a>
+			<a href="https://www.youtube.com/channel/UCfh-qmH5g4IgOzNE8H3fnlg"><img class="miniIcon" src="imgs/yt.png"></a>
+			<a href="https://www.reddit.com/r/BattleForgeReborn/"><img class="miniIcon" src="imgs/redd.png"></a>
+			<a href="https://www.patreon.com/skylordsreborn"><img class="miniIcon" src="imgs/patr.png"></a>
+		</div>
+
+		<div class="optionsDiv">
+			<div class="settingsPart">
+				<input type="text" id="nameTextbox" placeholder="Card Name..."><br/>
+				<button id="resetAllButton">Reset Filters</button><br/>
+				<button id="showMapsButton">Show Maps</button>
+
+			</div>
+
+			<div class="settingsPart mapSettings">
+				<input type="checkbox" class="mapPlayerCountCheckBox" value="1" checked><p class="textboxText">1 Player</p><br/>
+				<input type="checkbox" class="mapPlayerCountCheckBox" value="2" checked><p class="textboxText">2 Players</p><br/>
+				<input type="checkbox" class="mapPlayerCountCheckBox" value="4" checked><p class="textboxText">4 Players</p><br/>
+				<input type="checkbox" class="mapPlayerCountCheckBox" value="12" checked><p class="textboxText">12 Players</p>
+			</div>
+
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" class="colorCheckBox" id="colorBox_0" value="0" checked><p class="textboxText">Blue / Frost</p><br/>
+				<input type="checkbox" class="colorCheckBox" id="colorBox_1" value="1" checked><p class="textboxText">Red / Fire</p><br/>
+				<input type="checkbox" class="colorCheckBox" id="colorBox_2" value="2" checked><p class="textboxText">Green / Nature</p><br/>
+				<input type="checkbox" class="colorCheckBox" id="colorBox_3" value="3" checked><p class="textboxText">Purple / Shadow</p><br/>
+				<button id="checkColorsButton">None</button>
+			</div>
+
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" class="colorCheckBox" id="colorBox_4" value="4" checked><p class="textboxText">Red Green / Twilight</p><br/>
+				<input type="checkbox" class="colorCheckBox" id="colorBox_5" value="5" checked><p class="textboxText">Blue Purple / Lost Soul</p><br/>
+				<input type="checkbox" class="colorCheckBox" id="colorBox_7" value="7" checked><p class="textboxText">Blue Green / Stonekin</p><br/>
+				<input type="checkbox" class="colorCheckBox" id="colorBox_8" value="8" checked><p class="textboxText">Red Purple / Bandid</p><br/>
+				<input type="checkbox" class="colorCheckBox" id="colorBox_6" value="6" checked><p class="textboxText">Neutral / Legendary</p>
+			</div>
+
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" class="tierCheckBox" value="1" checked><p class="textboxText">Tier 1</p><br/>
+				<input type="checkbox" class="tierCheckBox" value="2" checked><p class="textboxText">Tier 2</p><br/>
+				<input type="checkbox" class="tierCheckBox" value="3" checked><p class="textboxText">Tier 3</p><br/>
+				<input type="checkbox" class="tierCheckBox" value="4" checked><p class="textboxText">Tier 4</p>
+			</div>
+
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" class="rarityCheckBox" value="0" checked><p class="textboxText">Common</p><br/>
+				<input type="checkbox" class="rarityCheckBox" value="1" checked><p class="textboxText">Uncommon</p><br/>
+				<input type="checkbox" class="rarityCheckBox" value="2" checked><p class="textboxText">Rare</p><br/>
+				<input type="checkbox" class="rarityCheckBox" value="3" checked><p class="textboxText">Ultra Rare</p>
+			</div>
+			
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" class="editionCheckBox" value="1" checked><p class="textboxText">Twilight</p><br/>
+				<input type="checkbox" class="editionCheckBox" value="2" checked><p class="textboxText">Renegade</p><br/>
+				<input type="checkbox" class="editionCheckBox" value="4" checked><p class="textboxText">Lost Souls</p><br/>
+				<input type="checkbox" class="editionCheckBox" value="8" checked><p class="textboxText">Amii</p>
+			</div>
+
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" class="affinityCheckBox" value="-1" checked><p class="textboxText">None</p><br/>
+				<input type="checkbox" class="affinityCheckBox" value="0" checked><p class="textboxText">Blue / Blessed</p><br/>
+				<input type="checkbox" class="affinityCheckBox" value="1" checked><p class="textboxText">Red / Infused</p><br/>
+				<input type="checkbox" class="affinityCheckBox" value="2" checked><p class="textboxText">Green / Gifted</p><br/>
+				<input type="checkbox" class="affinityCheckBox" value="3" checked><p class="textboxText">Purple / Tainted</p>
+			</div>			
+
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" class="typeCheckBox" value="2" checked><p class="textboxText">Unit</p><br/>
+				<input type="checkbox" class="typeCheckBox" value="0" checked><p class="textboxText">Spell</p><br/>
+				<input type="checkbox" class="typeCheckBox" value="3" checked><p class="textboxText">Structure</p><br/>
+				<input type="checkbox" class="unitRangedCheckBox" value="0" checked><p class="textboxText">Meele Units</p><br/>
+				<input type="checkbox" class="unitRangedCheckBox" value="1" checked><p class="textboxText">Ranged Units</p>
+			</div>
+	
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" class="unitSizeCheckBox" value="0" checked><p class="textboxText">S Units</p><br/>
+				<input type="checkbox" class="unitSizeCheckBox" value="1" checked><p class="textboxText">M Units</p><br/>
+				<input type="checkbox" class="unitSizeCheckBox" value="2" checked><p class="textboxText">L Units</p><br/>
+				<input type="checkbox" class="unitSizeCheckBox" value="3" checked><p class="textboxText">XL Units</p>
+			</div>
+
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" class="unitCountersCheckBox" value="0" checked><p class="textboxText">Counters S</p><br/>
+				<input type="checkbox" class="unitCountersCheckBox" value="1" checked><p class="textboxText">Counters M</p><br/>
+				<input type="checkbox" class="unitCountersCheckBox" value="2" checked><p class="textboxText">Counters L</p><br/>
+				<input type="checkbox" class="unitCountersCheckBox" value="3" checked><p class="textboxText">Counters XL</p><br/>
+				<input type="checkbox" class="unitCountersCheckBox" value="4" checked><p class="textboxText">Special Attack</p>
+			</div>
+
+			<div class="settingsPart cardSettings">
+				<input type="checkbox" id="sortByCostCheckbox"><p class="textboxText">Sort By Energy</p><br/>
+				<input type="checkbox" id="sortByOrbsCheckbox" checked><p class="textboxText">Sort By Orbs</p><br/>
+				<input type="checkbox" id="sortByAlphabetCheckbox"><p class="textboxText">Sort By Name</p><br/>
+				<input type="checkbox" id="sortAscCheckbox" checked><p class="textboxText">Ascending</p>
+			</div>	
+
+			<div class="settingsPart cardSettings">
+				<div class="orbRowDiv">
+					<p class="textboxText">C</p><br/>
+					<div class="icon iBlue"></div><br/>
+					<div class="icon iRed"></div><br/>
+					<div class="icon iGreen"></div><br/>
+					<div class="icon iPurple"></div><br/>
+				</div>
+				<div class="orbRowDiv">
+					<p class="textboxText">T1</p><br/>
+					<input type="radio" class="orbSelecterRadio" id="orbst1_1" name="orbst1" value="B" checked>
+					<input type="radio" class="orbSelecterRadio" id="orbst1_2" name="orbst1" value="R">
+					<input type="radio" class="orbSelecterRadio" id="orbst1_3" name="orbst1" value="N">
+					<input type="radio" class="orbSelecterRadio" id="orbst1_4" name="orbst1" value="S">
+				</div>
+				<div class="orbRowDiv">
+					<p class="textboxText">T2</p><br/>
+					<input type="radio" class="orbSelecterRadio" id="orbst2_1" name="orbst2" value="B" checked>
+					<input type="radio" class="orbSelecterRadio" id="orbst2_2" name="orbst2" value="R">
+					<input type="radio" class="orbSelecterRadio" id="orbst2_3" name="orbst2" value="N">
+					<input type="radio" class="orbSelecterRadio" id="orbst2_4" name="orbst2" value="S">
+				</div>
+				<div class="orbRowDiv">
+					<p class="textboxText">T3</p><br/>
+					<input type="radio" class="orbSelecterRadio" id="orbst3_1" name="orbst3" value="B" checked>
+					<input type="radio" class="orbSelecterRadio" id="orbst3_2" name="orbst3" value="R">
+					<input type="radio" class="orbSelecterRadio" id="orbst3_3" name="orbst3" value="N">
+					<input type="radio" class="orbSelecterRadio" id="orbst3_4" name="orbst3" value="S">
+				</div>
+				<div class="orbRowDiv">
+					<p class="textboxText">T4</p><br/>
+					<input type="radio" class="orbSelecterRadio" id="orbst4_1" name="orbst4" value="B" checked>
+					<input type="radio" class="orbSelecterRadio" id="orbst4_2" name="orbst4" value="R">
+					<input type="radio" class="orbSelecterRadio" id="orbst4_3" name="orbst4" value="N">
+					<input type="radio" class="orbSelecterRadio" id="orbst4_4" name="orbst4" value="S">
+				</div>
+				<div style="clear: both"></div>
+				<input type="checkbox" id="showPlayableCheckbox" style="float: left;"><p class="textboxText" style="white-space: nowrap; display: block; float: left;">Only Show Playable Cards</p><br/>
+				
+			</div>
+
+			
+
+			<div id="tooltip"></div>
+		</div>
+
+
+		<div class="cardList"><h1>Loading Cards...</h1></div>
+
+		
+		<div class="deckBuilderDiv">
+			<div class="settingsPart" style="text-align: center;">
+				<p class="infoBox">Deckbuilder<br/><span class="lightblue">Hover for Info</span></p>
+			</div>
+			<div class="settingsPart">
+				<select id="deckListSelect">
+				
+				</select><br/>
+				<input type="text" id="newDeckTextBox" placeholder="New Deck Name ..."><br/>
+				<button class="smallButton" id="newDeckButton">New</button>
+				<button class="smallButton" id="deleteDeckButton">Del</button>
+			</div>
+
+			<div class="settingsPart">
+				<div id="currentDeckDiv"></div>
+			</div>
+
+			<div class="settingsPart" style="text-align: center;">
+				<button class="smallButton" id="shareDeckButton">Link my Deck</button><br/>
+				<button class="smallButton" id="saveDeckImageButton">Save Deck as Image</button>
+			</div>
+		</div>
+	</body>
+</html>

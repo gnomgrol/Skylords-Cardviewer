@@ -1,0 +1,355 @@
+﻿body{
+	background-image: url("imgs/bf.jpg");
+	background-position: 50% 50%;
+	background-size: cover;
+	position: relative;
+	overflow-y: hidden;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	min-width: 1275px;
+}
+
+div::-webkit-scrollbar-track
+{
+  background-color: transparent;
+  width: 16px;
+}
+
+div::-webkit-scrollbar
+{
+  width: 14px;
+  margin: 0px 1px;
+  background-color: transparent;
+}
+
+div::-webkit-scrollbar-thumb
+{
+	background-color: #eeeeee;
+	border-radius: 6px;
+}
+
+
+.topBar{
+	margin: 0 auto;
+	width: 85%;
+	height: 24px;
+	background-color: rgba(0,0,0,0.7);
+	padding: 0 20px;
+	border: 1px solid #222222;
+	border-bottom: none;
+	border-top: none;
+}
+a{
+	text-decoration: none;
+}
+.textLink{
+	color: #eeeeee;
+	margin: 4px 30px 0px 0px;	
+	font-family: 'Montserrat', sans-serif;
+	outline: none;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: top;
+}
+.miniIcon{
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 4px 2px;
+}
+
+h1{
+	color: #eeeeee;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0 auto;
+	font-size: 50px;
+	text-align: center;
+}
+p{
+	color: #eeeeee;
+    font-family: 'Montserrat', sans-serif;
+	margin: 15px 0;
+}
+.mText{
+	margin: 10px;
+	text-align: center;
+	font-size: 16px;
+}
+.sText{
+	font-size: 14px;
+	margin: 5px;
+}
+.miniText{
+	font-size: 12px;
+	margin: 0px;
+}
+.halfDiv{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+.thirdDiv{
+	width: 33%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+
+.icon{
+	width: 12px;
+	height: 12px;
+	margin: 2px;
+	display: inline-block;
+	vertical-align: top;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+.iBlue{
+	background-image: url("imgs/blue.png");
+}
+.iRed{
+	background-image: url("imgs/red.png");
+}
+.iGreen{
+	background-image: url("imgs/green.png");
+}
+.iPurple{
+	background-image: url("imgs/purple.png");
+}
+.fl{
+	float: left;
+}
+.small{
+	font-size: 12px;
+	margin: 0px;
+}
+.blue{
+	color: #79ff8f;
+}
+.lightblue{
+	color: #00f7ff;
+}
+input{
+	margin: 10px 10px;
+}
+input[type=checkbox]{
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+	display: inline-block;
+	vertical-align: top;
+}
+.textboxText{
+	line-height: 16px;
+	font-size: 12px;
+	margin: 2px;
+	display: inline-block;
+	vertical-align: top;
+}
+input[type=text]{
+	width: 120px;
+	height: 20px;
+	font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+	margin: 5px;
+}
+select{
+	margin: 5px;
+	height: 30px;
+	line-height: 30px;
+	background:#f4f4f4;
+	font-size: 18px;
+	display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+button{
+	width: 120px;
+	font-size: 14px;
+    font-family: 'Montserrat', sans-serif;	
+	margin: 5px;
+}
+#checkColorsButton{
+	width: 120px;
+	height: 20px;
+	font-size: 12px;
+	margin: 2px;
+	display: inline-block;
+	text-align: center;
+}
+#showOrbOrderButton{
+	height: auto;
+	width: auto;
+	font-size: 14px;
+	margin: 0px;
+	display: inline-block;	
+}
+
+
+.orbSelecterRadio{
+	width: 12px;
+	height: 12px;
+	float: left;
+	margin: 2px;
+}
+.orbRowDiv{
+	width: 30px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.cardList{
+	height: calc(100vh - 330px);
+	padding: 20px;
+	width: 85%;
+	overflow-y: scroll;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	border: 1px solid #222;
+}
+
+.optionsDiv{
+	width: 85%;
+	padding: 10px 20px;
+	height: 110px;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.7);
+	overflow-x: auto;
+	border: 1px solid #222222;
+	border-bottom: none;
+	border-bottom: 1px solid #eeeeee;
+}
+.deckBuilderDiv{
+	width: 85%;
+	padding: 0px 20px;
+	height: 130px;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.7);
+	overflow-x: auto;	
+	border: 1px solid #222222;
+	border-top: 1px solid #eeeeee;
+}
+
+.settingsPart{
+	height: 90px; float: left;
+	margin: 5px;
+	margin-bottom: 15px;
+	border-right: 1px solid #222222;
+	padding-right: 5px;
+}
+
+.cardDiv{
+	width: 220px;
+	height: 300px;
+	margin: 10px;
+	display: inline-block;
+}
+.cardDiv:hover{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border-top: 1px dashed #eeeeee;
+}
+
+.cardImg{
+	width: 220px;
+	float: right;
+}
+
+.mapDiv{
+	width: 450px;
+	height: 260px;
+	margin: 10px;
+	display: inline-block;
+	background-position: 50% 50%;
+	background-size: cover;
+	vertical-align: top;
+	position: relative;
+	border: 1px solid #222222;
+}
+
+.mapPreview{
+	width: 140px;
+	height: 140px;
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#tooltip{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 430px;
+	background-color: rgba(0,0,0,0.9);
+	border: 1px solid #222222;
+	padding: 10px;
+	pointer-events:none;
+	display: none;
+	z-index: 10;
+}
+.deckCardTip{
+	width: 180px !important;
+}
+
+.smallButton{
+	height: 30px;
+	width: 63px;
+	font-size: 12px;
+	margin: 5px;
+	display: inline-block;
+	vertical-align: top;
+}
+#deckListSelect{
+	margin: 5px;
+	display: inline-block;
+	vertical-align: top;
+	min-width: 140px;
+	font-size: 12px;
+}
+#newDeckTextBox{
+	width: 140px;
+	height: 30px;
+	font-size: 12px;
+	margin: 5px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#currentDeckDiv{
+	width: 740px;
+	height: 120px;
+	display: inline-block;
+	overflow-y: auto;
+}
+.deckCard{
+	height: 56px; /*92*/
+	width: 66px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 2px;
+	background-position: 50% 0%;
+	background-size: cover;
+}
+.deckCard:hover{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border: 1px solid #cccccc;
+}
+.infoBox{
+	text-align: center;
+	margin-right: 20px;
+}
+#shareDeckButton{
+	width: auto;
+}
+#saveDeckImageButton{
+	width: auto;
+}
