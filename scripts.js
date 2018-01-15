@@ -5,6 +5,9 @@ var globalMaps = {};
 var deckList = {};
 var selectedDeck = null;
 
+var documentRoot = window.location.href;
+documentRoot = documentRoot.substring(0, documentRoot.lastIndexOf("/") + 1);
+
 // Load or Store Data to HTML5 storage
 function SaveData(){
 	var name = $("#deckListSelect").val();
@@ -202,7 +205,7 @@ function shareDeck(){
 		deckData += getGlobalCardIndex(card) + "|";
 	});
 	var encodedDeck = btoa(deckData);
-	window.prompt("Press Ctrl+C to copy!", "http://builds.gg/bf/cards.html?d=" + encodedDeck);
+	window.prompt("Press Ctrl+C to copy!", documentRoot + "cards.html?d=" + encodedDeck);
 }
 
 
@@ -384,7 +387,7 @@ function AddCardHovers(){
 		if (e.shiftKey){
 			var index = $(this).attr("data-id");
 			var card = currentCardList[index];
-			window.prompt("Press Ctrl+C to copy the link!", "http://builds.gg/bf/cards.html?c=" + encodeURIComponent(card.Name));
+			window.prompt("Press Ctrl+C to copy the link!", documentRoot.replace(/\/[^\/]+$/,"/") + "cards.html?c=" + encodeURIComponent(card.Name));
 		}
 	});
 
@@ -694,7 +697,7 @@ $(document).ready(function(){
 		});
 		var encodedDeck = btoa(deckData);
 
-		window.open("http://builds.gg/bf/deck.html?d=" + encodedDeck, '_blank');
+		window.open(documentRoot.replace(/\/[^\/]+$/,"/") + "deck.html?d=" + encodedDeck, '_blank');
 	});
 	
 
