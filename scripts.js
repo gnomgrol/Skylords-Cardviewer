@@ -194,6 +194,11 @@ function displayCardList(cardList){
 		+ "</div>";
 		$(".cardList").append(html);
 	});
+	
+	var newWidth = $("#cardSizeSlider").val();
+	var newHeight = newWidth * 1.36363;
+	$(".cardDiv").css("width", newWidth);
+	$(".cardDiv").css("height", newHeight);
 }
 
 // Shows popup with decklink
