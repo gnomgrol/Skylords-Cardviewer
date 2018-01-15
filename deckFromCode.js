@@ -88,6 +88,7 @@ $(document).ready(function(){
 
     var globalCards = {};
     
+    var domain = window.location.hostname;
     var proxy = "proxy.php?url=";
     var imgProxy = "imgProxy.php?url=";
 	if(domain.indexOf("skylords.eu") > -1){proxy = "";imgProxy ="";}
