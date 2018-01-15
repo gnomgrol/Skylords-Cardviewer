@@ -88,6 +88,10 @@ $(document).ready(function(){
 
     var globalCards = {};
     
+    var proxy = "proxy.php?url=";
+    var imgProxy = "imgProxy.php?url=";
+	if(domain.indexOf("skylords.eu") > -1){proxy = "";imgProxy ="";}
+
     
     var xmlhttpSB = new XMLHttpRequest();
     xmlhttpSB.onreadystatechange = function() {
@@ -119,7 +123,7 @@ $(document).ready(function(){
                         var namestring = fixName(gCard.Name) + cardAffinityToString(gCard.Affinity);
                         
     
-                        var img = loadImage("imgProxy.php?url=https://cardbase.skylords.eu" + gCard.Image.Url);
+                        var img = loadImage(imgProxy + "https://cardbase.skylords.eu" + gCard.Image.Url);
                         images.push(img);
     
     
