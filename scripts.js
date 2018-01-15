@@ -7,6 +7,7 @@ var selectedDeck = null;
 
 var documentRoot = window.location.href;
 documentRoot = documentRoot.substring(0, documentRoot.lastIndexOf("/") + 1);
+var domain = window.location.hostname;
 
 // Load or Store Data to HTML5 storage
 function SaveData(){
@@ -592,6 +593,7 @@ function applyAllSorting(){
 
 $(document).ready(function(){
 	
+
 	// All onclick etc handler get added here
 
 	// Switch Views Maps/Cards
@@ -655,6 +657,13 @@ $(document).ready(function(){
 	});
 
 
+	// Card size slider
+	$("#cardSizeSlider").on('input', function(){
+		var newWidth = $(this).val();
+		var newHeight = newWidth * 1.36363;
+		$(".cardDiv").css("width", newWidth);
+		$(".cardDiv").css("height", newHeight);
+	});
 
 	// Check/Uncheck all Color sorting
 	$("#checkColorsButton").click(function(){
@@ -839,7 +848,10 @@ $(document).ready(function(){
 	};
 
 
-	xmlhttpSB.open("GET", "proxy.php?url=https://cardbase.skylords.eu/Cards/GetCards", true);
+	var proxy = "proxy.php?url=";
+	if(domain.indexOf("skylords.eu") > -1){proxy = "";}
+
+	xmlhttpSB.open("GET", proxy + "https://cardbase.skylords.eu/Cards/GetCards", true);
 	xmlhttpSB.send();
 
 
@@ -865,7 +877,7 @@ $(document).ready(function(){
 		}
 	};
 
-	xmlhttpMaps.open("GET", "proxy.php?url=https://cardbase.skylords.eu/Maps/GetMaps", true);
+	xmlhttpMaps.open("GET", proxy + "https://cardbase.skylords.eu/Maps/GetMaps", true);
 	xmlhttpMaps.send();
 
 });
