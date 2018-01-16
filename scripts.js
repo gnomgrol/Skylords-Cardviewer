@@ -439,8 +439,12 @@ function AddCardHovers(){
 				var val = card.Upgrades[key];
 				var namestring = card.Name + cardAffinityToString(card.Affinity);
 				var upgrade = getUpgradeData(namestring, val.Era);
-				html += "<p class='small'><span class='blue'>Level " + val.Era + ":</span> " + val.Description + "</p>";
-			    if(!!upgrade){html += "<p class='small'><span class='blue'>Drops on Map: </span>" + upgrade.mapName + " - " + upgrade.mapLevel + "</p><br/>";}
+				if(val.Description == null){
+					html += "<p class='small'>No Upgrade Data Available</p>";
+				}else{
+					html += "<p class='small'><span class='blue'>Level " + val.Era + ":</span> " + val.Description + "</p>";
+					if(!!upgrade){html += "<p class='small'><span class='blue'>Drops on Map: </span>" + upgrade.mapName + " - " + upgrade.mapLevel + "</p><br/>";}
+				}
 			});
 			
 
