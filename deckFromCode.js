@@ -124,7 +124,7 @@ $(document).ready(function(){
                         var namestring = fixName(gCard.Name) + cardAffinityToString(gCard.Affinity);
                         
     
-                        var img = loadImage(imgProxy + "https://cardbase.skylords.eu" + gCard.Image.Url);
+                        var img = loadImage(imgProxy + "https://api.skylords.eu" + gCard.Image.Url);
                         images.push(img);
     
     
@@ -134,7 +134,7 @@ $(document).ready(function(){
         }
     };
     
-    xmlhttpSB.open("GET", proxy + "https://cardbase.skylords.eu/Cards/GetCards", true);
+    xmlhttpSB.open("GET", proxy + "https://api.skylords.eu/Cards/GetCards", true);
     xmlhttpSB.send();
 
 });

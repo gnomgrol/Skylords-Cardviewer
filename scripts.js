@@ -190,7 +190,7 @@ function displayCardList(cardList){
 	$(".cardList").empty();
 	$.each(cardList, function(index, card){
 		var html = "<div class='cardDiv' data-id='" + index + "'>"
-		+ "<img class='cardImg' alt='" + card.Name + "' src='https://cardbase.skylords.eu" + card.Image.Url + "'>"
+		+ "<img class='cardImg' alt='" + card.Name + "' src='https://api.skylords.eu" + card.Image.Url + "'>"
 		+ "</div>";
 		$(".cardList").append(html);
 	});
@@ -231,11 +231,11 @@ function ShowMaps(maps){
 
 	$.each(maps, function(index, map){
 
-		var html = "<div class='mapDiv' style='background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://cardbase.skylords.eu" + map.Image.Url + ")' data-id='" + index + "'>"
+		var html = "<div class='mapDiv' style='background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://api.skylords.eu" + map.Image.Url + ")' data-id='" + index + "'>"
 		+ "<p class='mText'>" + map.Name + " - <span class='blue'>" + map.Players + " Players</span></p>"
 		+ "<p class='sText'>" + map.SubTitle + "</p>"
 		//+ "<p class='sText'>" + map.Description + "</p>"
-	    + "<img class='mapPreview' src='https://cardbase.skylords.eu" + map.Map.Url + "'>"
+	    + "<img class='mapPreview' src='https://api.skylords.eu" + map.Map.Url + "'>"
 
 		+ "</div>";
 
@@ -309,7 +309,7 @@ function ShowSelectedDeck(){
 		// render card divs
 		$.each(selectedDeck, function(index, val){
 			var card = selectedDeck[index];
-			var html = "<div class='deckCard' data-id='" + index + "' style='background-image: url(https://cardbase.skylords.eu" + card.Image.Url + ");'></div>";
+			var html = "<div class='deckCard' data-id='" + index + "' style='background-image: url(https://api.skylords.eu" + card.Image.Url + ");'></div>";
 			$("#currentDeckDiv").append(html);
 		});
 
@@ -350,7 +350,7 @@ function ShowSelectedDeck(){
 				var card = selectedDeck[index];
 
 				var html = "";
-				html += '<img style="height: 250px;" src="https://cardbase.skylords.eu' + card.Image.Url + '">';
+				html += '<img style="height: 250px;" src="https://api.skylords.eu' + card.Image.Url + '">';
 	
 				$("#tooltip").append(html);
 	
@@ -860,7 +860,7 @@ $(document).ready(function(){
 	var proxy = "proxy.php?url=";
 	if(domain.indexOf("skylords.eu") > -1){proxy = "";}
 
-	xmlhttpSB.open("GET", proxy + "https://cardbase.skylords.eu/Cards/GetCards", true);
+	xmlhttpSB.open("GET", proxy + "https://api.skylords.eu/Cards/GetCards", true);
 	xmlhttpSB.send();
 
 
@@ -886,7 +886,7 @@ $(document).ready(function(){
 		}
 	};
 
-	xmlhttpMaps.open("GET", proxy + "https://cardbase.skylords.eu/Maps/GetMaps", true);
+	xmlhttpMaps.open("GET", proxy + "https://api.skylords.eu/Maps/GetMaps", true);
 	xmlhttpMaps.send();
 
 });
