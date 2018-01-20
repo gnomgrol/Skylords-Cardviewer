@@ -53,7 +53,13 @@ $(document).ready(function(){
     function loadFinished() {
         imagesLoaded += 1;
         if (imagesLoaded == cardCount) {
-    
+            
+            var canW = images.length * 179; if(canW > 895){canW = 895;}
+            var canH = Math.ceil(images.length / 5.0) * 250;
+            canvas.setAttribute('width', canW);
+            canvas.setAttribute('height', canH);
+            canvas2.setAttribute('width', images.length * 60);
+
             var counter = 0;
             $.each(images, function(index){
                 var row = (index - (index % 5)) / 5;
@@ -68,7 +74,6 @@ $(document).ready(function(){
 
             var r = canvas.toDataURL('image/png');
             document.getElementById("display").src = r;
-
 
 
             $.each(images, function(index){
@@ -93,7 +98,7 @@ $(document).ready(function(){
     var imgProxy = "imgProxy.php?url=";
 	if(domain.indexOf("skylords.eu") > -1){proxy = "";imgProxy ="";}
 
-    
+
     var xmlhttpSB = new XMLHttpRequest();
     xmlhttpSB.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -123,18 +128,16 @@ $(document).ready(function(){
                         var gCard = globalCards[gIndex];
                         var namestring = fixName(gCard.Name) + cardAffinityToString(gCard.Affinity);
                         
-    
-                        var img = loadImage(imgProxy + "https://api.skylords.eu" + gCard.Image.Url);
+                        var img = loadImage(imgProxy + "https://cardbase.skylords.eu" + gCard.Image.Url);
+                        img.crossOrigin = "Anonymous";
                         images.push(img);
-    
-    
                     }
                 });
             }
         }
     };
     
-    xmlhttpSB.open("GET", proxy + "https://api.skylords.eu/Cards/GetCards", true);
+    xmlhttpSB.open("GET", proxy + "https://cardbase.skylords.eu/Cards/GetCards", true);
     xmlhttpSB.send();
 
 });
